@@ -1,4 +1,48 @@
+/* Vérification de l'image */
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* Couleurs personnalisées inspirées par l'univers du whiskey */
+.navbar {
+    background-color: #8B5E3C; /* Marron chaud */
+}
+.navbar-brand {
+    color: #3E2723; /* Jaune doré */
+}
+.navbar-nav .nav-link {
+    color: #F1E1C6; /* Beige clair */
+}
+.navbar-nav .nav-link:hover {
+    color: #3E2723; /* Marron doré pour le survol */
+}
+/* Corps de la page */
+body {
+    background-color: #F6E1B3; /* Crème clair comme fond par défaut */
+    color: #3E2723; /* Texte marron foncé */
+}
+div.hero {
+    background-image: url('/img/wolfgang-hasselmann-pVr6wvUneMk-unsplash.jpg'); /* Assurez-vous que l'image existe */
+    background-size: cover; /* L'image couvre toute la taille de l'écran */
+    background-position: center; /* Centrer l'image */
+    background-attachment: fixed; /* Fixer l'image lors du défilement */
+    margin: 0;
+    height: 100vh; /* Hauteur de l'écran */
+}
+/* Style pour le titre */
+h1 {
+    color: #3E2723; /* Texte h1 marron foncé */
+    text-align: center;
+    padding-top: 20vh; /* Décalage pour faire apparaître le texte après l'image */
+}
+
+/* Navbar Toggler */
+.navbar-toggler-icon {
+    background-color: #F1E1C6; /* Beige clair pour l'icône */
+}
+
+/* Style des éléments désactivés */
+.nav-item.disabled {
+    color: #A67C52; /* Gris / bronze pour les éléments désactivés */
 }

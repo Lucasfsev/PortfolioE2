@@ -4,35 +4,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg" style="background-color: #FF5733;">
-    <a class="navbar-brand text-white" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="color: white;"></span>
+        <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-around">
-            <li class="nav-item active">
-                <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Accueil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Features</a>
+                <a class="nav-link" href="#">Profil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Pricing</a>
+                <a class="nav-link" href="#">Stages</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white disabled" href="#">Disabled</a>
+                <a class="nav-link" href="#">Contact</a>
             </li>
         </ul>
     </div>
 </nav>
 
-<h1>Hello, world!</h1>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<div class="hero">
+    <h1>Hello, world!</h1>
+</div>
 
+
+    <div class="container">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Sed nec fermentum libero. Cras ultricies, justo sit amet auctor efficitur, enim libero consequat risus, et viverra nulla nulla nec leo. Curabitur volutpat tincidunt felis, sed tristique orci. Etiam in sapien ut metus posuere blandit. Nulla interdum, lorem vitae tincidunt dictum, urna sapien lobortis lectus, vel consectetur arcu augue eget felis. Vivamus viverra velit vel nulla gravida, ac vulputate leo sodales.</p>
+        <p>Curabitur quis orci nec felis malesuada elementum non in libero. Nam cursus, erat ac fermentum fermentum, felis elit iaculis elit, id scelerisque nisi erat et neque. Aenean pretium justo at erat faucibus, a tempor nunc congue. Nullam vestibulum erat ut ligula sodales, eget feugiat sem iaculis. Vivamus at risus neque. Aenean iaculis auctor turpis a sollicitudin.</p>
+    </div>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<footer>
+    © Copyright 2024 Lucas Alléaume Tous droits réservés
+</footer>
 </html>
