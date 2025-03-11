@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,43 +18,49 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-around">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Accueil</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Profil</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Stages</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#stages">Stages</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-<video id="background-video" autoplay loop muted>
-
-    <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
-
-</video>
-
-<div class="content">
-
-    <h1>BIEN PLUS QU'UNE RIVIÈRE</h1>
-
-    <h2>Une source de vie</h2>
-
-    <button id="btnVideo" onclick="playAndPause()">Pause II</button>
-
-</div>
-
-    <div class="container">
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Sed nec fermentum libero. Cras ultricies, justo sit amet auctor efficitur, enim libero consequat risus, et viverra nulla nulla nec leo. Curabitur volutpat tincidunt felis, sed tristique orci. Etiam in sapien ut metus posuere blandit. Nulla interdum, lorem vitae tincidunt dictum, urna sapien lobortis lectus, vel consectetur arcu augue eget felis. Vivamus viverra velit vel nulla gravida, ac vulputate leo sodales.</p>
-        <p>Curabitur quis orci nec felis malesuada elementum non in libero. Nam cursus, erat ac fermentum fermentum, felis elit iaculis elit, id scelerisque nisi erat et neque. Aenean pretium justo at erat faucibus, a tempor nunc congue. Nullam vestibulum erat ut ligula sodales, eget feugiat sem iaculis. Vivamus at risus neque. Aenean iaculis auctor turpis a sollicitudin.</p>
+<!-- Section avec la vidéo en arrière-plan -->
+<section id="hero">
+    <video id="background-video" autoplay loop muted>
+        <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <h1>BIEN PLUS QU'UNE RIVIÈRE</h1>
+        <h2>Une source de vie</h2>
+        <button id="btnVideo" onclick="playAndPause()">Pause II</button>
     </div>
+</section>
+
+<!-- Section Accueil -->
+<section id="home" class="container normal-section" style="min-height: 80vh;">
+    <h2>Accueil</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget lorem et eros posuere dictum non ut nisl. Integer sed justo turpis. Duis nec arcu eget massa fermentum efficitur. Curabitur scelerisque eros eu mi tincidunt, et facilisis purus malesuada.</p>
+</section>
+
+<!-- Section Profil -->
+<section id="profil" class="container normal-section" style="min-height: 80vh;">
+    <h2>Profil</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet semper turpis. Morbi luctus, neque ut varius luctus, urna nunc convallis elit, a dignissim risus turpis at eros. Integer vel augue ac lectus venenatis consequat.</p>
+</section>
+
+<!-- Section Stages -->
+<section id="stages" class="container normal-section" style="min-height: 80vh;">
+    <h2>Stages</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis felis at sapien aliquet, a posuere ex sagittis. Vivamus a semper mauris, sit amet dictum orci. Suspendisse potenti. In eget justo non metus auctor dapibus.</p>
+</section>
+
+<!-- Section Contact -->
+<section id="contact" class="container normal-section" style="min-height: 80vh;">
+    <h2>Contact</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in massa id nulla ullamcorper dignissim. Curabitur tristique interdum ligula ut faucibus. Integer nec diam a nisi sollicitudin fermentum.</p>
+</section>
 
 <script src="script/script.js"></script>
 </body>

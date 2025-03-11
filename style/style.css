@@ -1,37 +1,28 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css"; /* FontAwesome */
 
-
 /* Vérification de l'image */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Couleurs personnalisées inspirées par l'univers du whiskey */
+/* Couleurs personnalisées inspirées par une palette bleu et blanc */
 .navbar {
-    background-color: #8B5E3C; /* Marron chaud */
+    background-color: #1E3A8A; /* Bleu foncé */
 }
 .navbar-brand {
-    color: #3E2723; /* Jaune doré */
+    color: #E0F2FE; /* Bleu clair */
 }
 .navbar-nav .nav-link {
-    color: #F1E1C6; /* Beige clair */
+    color: #BFDBFE; /* Bleu pâle */
 }
 .navbar-nav .nav-link:hover {
-    color: #3E2723; /* Marron doré pour le survol */
+    color: #E0F2FE; /* Bleu plus clair au survol */
 }
+
 /* Corps de la page */
 body {
-    background-color: #F6E1B3; /* Crème clair comme fond par défaut */
-    color: #3E2723; /* Texte marron foncé */
-}
-div.hero {
-    background-image: url('/img/wolfgang-hasselmann-pVr6wvUneMk-unsplash.jpg'); /* Assurez-vous que l'image existe */
-    background-size: cover; /* L'image couvre toute la taille de l'écran */
-    background-position: center; /* Centrer l'image */
-    background-attachment: fixed; /* Fixer l'image lors du défilement */
-    margin: 0;
-    height: 100vh; /* Hauteur de l'écran */
+    background-color: white;
 }
 
 #background-video {
@@ -47,15 +38,10 @@ div.hero {
 }
 
 h1, h2, #btnVideo{
-
     color: white;
-
     font-family: Trebuchet MS;
-
     font-weight: bold;
-
     text-align: center;
-
 }
 
 h1 {
@@ -75,38 +61,38 @@ h2 { font-size: 3rem; }
 
 /* Style pour le titre */
 h1 {
-    color: #3E2723; /* Texte h1 marron foncé */
+    color: #1E3A8A; /* Bleu foncé */
     text-align: center;
-    padding-top: 20vh; /* Décalage pour faire apparaître le texte après l'image */
+    padding-top: 20vh;
 }
 
 /* Navbar Toggler */
 .navbar-toggler-icon {
-    background-color: #F1E1C6; /* Beige clair pour l'icône */
+    background-color: #BFDBFE; /* Bleu pâle */
 }
 
 /* Style des éléments désactivés */
 .nav-item.disabled {
-    color: #A67C52; /* Gris / bronze pour les éléments désactivés */
+    color: #93C5FD; /* Bleu gris clair */
 }
 
 /* Footer */
 footer {
-    background-color: #8B5E3C; /* Marron chaud, assorti à la navbar */
-    color: #F1E1C6; /* Beige clair pour le texte */
+    background-color: #1E3A8A; /* Bleu foncé */
+    color: #E0F2FE; /* Bleu clair */
     text-align: center;
     padding: 20px;
     margin-top: 50px;
 }
 
 footer a {
-    color: #F1E1C6; /* Beige clair pour les liens */
+    color: #E0F2FE; /* Bleu clair */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #3E2723; /* Marron doré au survol */
+    color: #BFDBFE; /* Bleu plus clair au survol */
 }
 
 .footer-content {
@@ -128,4 +114,21 @@ footer a:hover {
 footer .copyright {
     font-size: 14px;
     margin-top: 10px;
+}
+
+/* Section vidéo en plein écran */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 100% de la hauteur de l'écran */
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
