@@ -132,3 +132,10 @@ footer .copyright {
     height: 100%;
     object-fit: cover;
 }
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s ease-in-out;
+}
