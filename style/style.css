@@ -22,8 +22,9 @@ img {
 
 /* Corps de la page */
 body {
-    background-color: white;
+    padding-top: 60px; /* Ajuste selon la hauteur réelle de ta navbar */
 }
+
 
 #background-video {
     height: 100vh;
@@ -125,17 +126,22 @@ footer .copyright {
 }
 
 #background-video {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1; /* Met la vidéo en arrière-plan */
 }
+
 
 .navbar {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1000; /* S'assurer qu'elle passe au-dessus de tout */
     transition: top 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.9); /* Ajoute un léger fond pour la lisibilité */
 }
+
