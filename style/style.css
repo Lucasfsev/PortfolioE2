@@ -19,29 +19,28 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar-logo {
-    font-size: 1.5rem;
-    color: #333;
-    text-decoration: none;
+    width: 100%; /* Assurez-vous que le conteneur prend toute la largeur */
 }
 
 .navbar-menu {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    width: 100%; /* Le menu prend toute la largeur disponible */
+    justify-content: space-around; /* Espacement uniforme entre les éléments */
 }
 
 .nav-item {
-    position: relative;
+    flex-grow: 1; /* Chaque élément du menu prend une partie égale de la largeur */
+    text-align: center; /* Centre le texte dans chaque élément */
 }
 
 .nav-link {
     color: #333;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem; /* Agrandir la taille de la police */
+    font-family: 'Arial', sans-serif; /* Changer la police de caractères */
     transition: color 0.3s;
+    display: block; /* Assurez-vous que le lien prend toute la largeur de l'élément */
 }
 
 .nav-link:hover {
@@ -56,6 +55,15 @@ img {
     background: #007bff;
     transition: width .3s;
 }
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
 
 .nav-link:hover::after {
     width: 100%;
