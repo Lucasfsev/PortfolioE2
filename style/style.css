@@ -6,41 +6,52 @@ img {
     height: auto;
 }
 
+/* Corps de la page */
+body {
+    background-color: #f9f9f9; /* Blanc cassé pour un look moderne */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Navbar */
 .navbar {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.95); /* Blanc avec transparence légère */
     padding: 1rem 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     z-index: 1000;
+    top: 0;
+    transition: top 0.3s ease-in-out;
 }
 
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Assurez-vous que le conteneur prend toute la largeur */
+    width: 100%;
 }
 
 .navbar-menu {
     list-style: none;
     display: flex;
-    width: 100%; /* Le menu prend toute la largeur disponible */
-    justify-content: space-around; /* Espacement uniforme entre les éléments */
+    width: 100%;
+    justify-content: space-around;
 }
 
 .nav-item {
-    flex-grow: 1; /* Chaque élément du menu prend une partie égale de la largeur */
-    text-align: center; /* Centre le texte dans chaque élément */
+    flex-grow: 1;
+    text-align: center;
 }
 
 .nav-link {
     color: #333;
     text-decoration: none;
-    font-size: 1.5rem; /* Agrandir la taille de la police */
-    font-family: 'Arial', sans-serif; /* Changer la police de caractères */
+    font-size: 1.5rem;
+    font-family: 'Arial', sans-serif;
     transition: color 0.3s;
-    display: block; /* Assurez-vous que le lien prend toute la largeur de l'élément */
+    display: block;
 }
 
 .nav-link:hover {
@@ -53,17 +64,8 @@ img {
     width: 0;
     height: 2px;
     background: #007bff;
-    transition: width .3s;
+    transition: width 0.3s;
 }
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
 
 .nav-link:hover::after {
     width: 100%;
@@ -99,28 +101,29 @@ img {
     }
 }
 
-/* Corps de la page */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+/* Section avec la vidéo en arrière-plan */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* La section prend toute la hauteur de l'écran */
+    overflow: hidden;
 }
 
-
+/* Vidéo de fond limitée à #hero */
 #background-video {
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
+    position: absolute; /* Utilisé en mode absolu pour s'adapter à #hero */
     top: 0;
-    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: -1;
 }
 
-h1, h2, #btnVideo{
-    color: white;
-    font-family: Trebuchet MS;
+/* Titres et bouton de la vidéo */
+h1, h2, #btnVideo {
+    color: #1E3A8A; /* Bleu foncé */
+    font-family: 'Trebuchet MS', sans-serif;
     font-weight: bold;
     text-align: center;
 }
@@ -128,33 +131,66 @@ h1, h2, #btnVideo{
 h1 {
     font-size: 6rem;
     margin-top: 30vh;
-}
-
-h2 { font-size: 3rem; }
-
-#btnVideo{
-    font-size: 1.5rem;
-    background: 0;
-    border: 0;
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Style pour le titre */
-h1 {
-    color: #1E3A8A; /* Bleu foncé */
-    text-align: center;
     padding-top: 20vh;
 }
 
-/* Navbar Toggler */
-.navbar-toggler-icon {
-    background-color: #BFDBFE; /* Bleu pâle */
+h2 {
+    font-size: 3rem;
 }
 
-/* Style des éléments désactivés */
-.nav-item.disabled {
-    color: #93C5FD; /* Bleu gris clair */
+#btnVideo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#btnVideo:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Bouton Back to Top */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Dégradé bleu */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Masqué par défaut */
+    transition: opacity 0.3s, transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+}
+
+/* Le bouton affiche uniquement un accent circonflexe */
+#backToTop::before {
+    content: "^";
+}
+
+#backToTop:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: scale(1.1);
+}
+
+#backToTop.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer */
@@ -167,13 +203,13 @@ footer {
 }
 
 footer a {
-    color: #E0F2FE; /* Bleu clair */
+    color: #E0F2FE;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #BFDBFE; /* Bleu plus clair au survol */
+    color: #BFDBFE;
 }
 
 .footer-content {
@@ -197,31 +233,5 @@ footer .copyright {
     margin-top: 10px;
 }
 
-/* Section vidéo en plein écran */
-#hero {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* 100% de la hauteur de l'écran */
-    overflow: hidden;
-}
 
-#background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Met la vidéo en arrière-plan */
-}
-
-
-.navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000; /* S'assurer qu'elle passe au-dessus de tout */
-    transition: top 0.3s ease-in-out;
-    background-color: rgba(255, 255, 255, 0.9); /* Ajoute un léger fond pour la lisibilité */
-}
-
+timeline css
