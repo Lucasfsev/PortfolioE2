@@ -11,15 +11,17 @@
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="navbar-container">
+<nav class="navbar fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">PORTFOLIO</a>
         <ul class="navbar-menu">
-            <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#profil">À propos</a></li>
             <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
             <li class="nav-item"><a class="nav-link" href="#bts">BTS SIO</a></li>
             <li class="nav-item"><a class="nav-link" href="#stages">Stages</a></li>
             <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Veille">Veille</a></li>
             <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
             <li class="nav-item"><a class="nav-link" href="#epreuves">Épreuves</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -38,32 +40,105 @@
         <h2>ÉTUDIANT EN BTS SIO - OPTION SLAM</h2>
     </div>
 
-    <button id="btnVideo" onclick="playAndPause()">Pause II</button>
-</section>
 
-
-<!-- Section Accueil -->
-<section id="home" class="container normal-section" style="min-height: 80vh;">
-    <h2>Accueil</h2>
-    <p>Bienvenue sur mon portfolio ! Découvrez mon parcours, mes compétences et mes projets en BTS SIO.</p>
 </section>
 
 <!-- Section Profil -->
-<section id="profil" class="container normal-section" style="min-height: 80vh;">
+<section id="profil" class="container normal-section" style="min-height: 50vh;">
     <h2>Profil</h2>
-    <p>Je suis un étudiant en BTS SIO option SLAM, passionné par le développement web et les technologies informatiques.</p>
+    <p>Bonjour, je suis Lucas, étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO) avec l'option SLAM (Solutions Logicielles et Applications Métiers). Passionné par le développement , j’ai acquis des compétences solides en programmation, en conception d’applications et en gestion de bases de données.
+        Au cours de ma formation, j'ai eu l'opportunité de travailler sur des projets concrets, tels que la refonte de l’application métier d’une entreprise. Ces expériences m'ont permis de me familiariser avec des technologies comme C#, et de perfectionner mes compétences en analyse des besoins clients et en gestion de projet.
+        Je suis motivé à poursuivre mon apprentissage en travaillant sur des projets ambitieux qui répondent aux défis actuels du développement logiciel. Mon objectif est de participer activement à la création de solutions sur-mesure et innovantes pour les entreprises.
+        .</p>
 </section>
 
 <!-- Section Parcours -->
-<section id="parcours" class="container normal-section" style="min-height: 80vh;">
-    <h2>Parcours</h2>
-    <p>Mon parcours académique et professionnel m’a permis d’acquérir des compétences solides en informatique.</p>
+<section id="parcours" class="parcours-container" style="min-height: 50vh;">
+    <h2>Mon Parcours</h2>
+    <p>Mon parcours m’a permis de développer une expertise technique dans le domaine de l’informatique. De ma premières années d’études en BTS SIO SLAM, où j'ai acquis des bases solides, à mes premières expériences professionnelles chaque étape a été un tremplin pour mon évolution professionnelle.</p>
+    <p>J'ai eu la chance de collaborer sur des projets concrets et variés, qui m’ont permis de comprendre les enjeux réels du développement informatique et de la gestion de projets IT. Aujourd’hui, je continue d’apprendre et de me perfectionner afin de devenir un expert en développement d’applications métiers et en gestion de solutions logicielles.</p>
+
+    <section class="design-section">
+        <div class="timeline">
+
+            <div class="timeline-empty">
+            </div>
+
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h3>1ère année de BTS SIO SLAM</h3>
+                <p>Septembre 2023 - juin 2024</p>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h3>STAGE AS PARNÉ</h3>
+                <p>8 Avril 2024 - 7 Juin 2024 </p>
+            </div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-empty">
+            </div>
+
+            <div class="timeline-empty">
+            </div>
+
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class=" timeline-component timeline-content">
+                <h3>2ème année de BTS SIO SLAM</h3>
+                <p>Septembre 2024 - Juin 2025</p>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h3>STAGE S3P</h3>
+                <p>8 Janvier 2025 - 28 Février 2025</p>
+            </div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+
+
+        </div>
+    </section>
 </section>
 
-<!-- Section BTS SIO -->
-<section id="bts" class="container normal-section" style="min-height: 80vh;">
-    <h2>BTS SIO</h2>
-    <p>Le BTS SIO (Services Informatiques aux Organisations) propose deux spécialités : SISR et SLAM. J’ai choisi l’option SLAM axée sur le développement.</p>
+<section id="bts" class="container normal-section">
+    <h2>BTS Services Informatiques aux Organisations (SIO)</h2>
+    <p>Le BTS Services Informatiques aux Organisations (SIO) forme des techniciens
+        spécialisés dans la gestion et le développement des systèmes informatiques au sein des entreprises.
+        Ce diplôme permet de répondre aux besoins croissants des entreprises en matière d’informatique et de nouvelles technologies.
+        Il s’agit d’une formation de deux ans qui combine théorie et pratique, avec une forte composante de stage en entreprise.
+        Il est possible choisir entre deux options : SISR et SLAM.</p>
+
+    <div class="section-fade-in">
+        <div class="row" style="display: flex; justify-content: space-between; margin-top: 40px;">
+            <!-- Section SISR -->
+            <div class="col-md-5 section-fade-in">
+                <h3>SISR - Solutions d'Infrastructure, Systèmes et Réseaux</h3>
+                <p><strong>Spécificité :</strong> L'option SISR forme des techniciens capables de gérer et maintenir des infrastructures réseaux et systèmes au sein des entreprises. L'accent est mis sur la gestion des serveurs, des réseaux, de la sécurité des données et des systèmes d'information.</p>
+                <p><strong>Débouchés :</strong> Les diplômés de cette spécialité peuvent exercer des métiers tels que administrateur système et réseaux, technicien en maintenance informatique, ou responsable de la sécurité des systèmes d'information. Ils peuvent travailler dans divers secteurs, allant des entreprises de services numériques (ESN) aux administrations publiques, en passant par les PME et grandes entreprises.</p>
+            </div>
+
+            <!-- Section SLAM -->
+            <div class="col-md-5 section-fade-in">
+                <h3>SLAM - Solutions Logicielles et Applications Métiers</h3>
+                <p><strong>Spécificité :</strong> L'option SLAM prépare les étudiants à la conception et au développement d'applications logicielles adaptées aux besoins des entreprises. Les étudiants sont formés à la programmation, au développement d'applications web, à la gestion de bases de données et à l'intégration de solutions logicielles.</p>
+                <p><strong>Débouchés :</strong> Les diplômés de cette option peuvent exercer des métiers tels que développeur web, développeur d’applications mobiles, analyste programmeur, ou chef de projet informatique. Les secteurs d’emploi sont variés : entreprises de développement de logiciels, start-ups, ou encore entreprises ayant des besoins en développement interne d’applications métiers.</p>
+            </div>
+        </div>
+
+        <h3>Possibilités de poursuite d'études</h3>
+        <p>Après l'obtention du BTS SIO, plusieurs options de poursuite d’études s'offrent aux diplômés. Parmi les plus courantes, on retrouve :</p>
+        <ul>
+            <li><strong>Licence Professionnelle</strong> (en réseaux, développement web, systèmes d’information, sécurité informatique, etc.).</li>
+            <li><strong>Écoles d’ingénieurs</strong>, permettant de se spécialiser davantage en informatique, notamment en développement, cybersécurité, ou en systèmes et réseaux.</li>
+            <li><strong>Formation en alternance</strong> pour acquérir encore plus d'expérience en entreprise tout en poursuivant des études supérieures.</li>
+            <li><strong>Certifications spécialisées</strong> (comme Cisco, Microsoft, Google, etc.) pour obtenir des compétences pointues et reconnues par les employeurs dans des domaines spécifiques.</li>
+        </ul>
+        <p>Le BTS SIO est donc un excellent tremplin pour démarrer sa carrière, avec de nombreuses opportunités d'évolution professionnelle et de spécialisations.</p>
+    </div>
 </section>
 
 <!-- Section Stages -->
@@ -73,11 +148,41 @@
 </section>
 
 <!-- Section Compétences -->
-<section id="competences" class="container normal-section" style="min-height: 80vh;">
-    <h2>Compétences</h2>
-    <p>Je maîtrise plusieurs langages et technologies : HTML, CSS, JavaScript, PHP, SQL, et bien d’autres.</p>
+<section id="competences">
+    <h2>Mes Compétences</h2>
+    <div class="carousel-container">
+        <div id="carousel">
+            <div class="item"><img src="assets/img/html-logo.png" alt="HTML"><p>HTML</p></div>
+            <div class="item"><img src="images/css.png" alt="CSS"><p>CSS</p></div>
+            <div class="item"><img src="images/js.png" alt="JavaScript"><p>JavaScript</p></div>
+            <div class="item"><img src="images/sql.png" alt="Wordpress"><p>Wordpress</p></div>
+            <div class="item"><img src="images/c#.png" alt="C#"><p>C#</p></div>
+            <div class="item"><img src="images/php.png" alt="PHP"><p>PHP</p></div>
+            <div class="item"><img src="images/symfony.png" alt="Symfony"><p>Symfony</p></div>
+            <div class="item"><img src="images/sql.png" alt="SQL"><p>SQL</p></div>
+
+        </div>
+
+        <!-- Ajout des boutons radio dans un div -->
+        <div class="radio-buttons">
+            <input type="radio" name="position" id="pos1" checked />
+            <input type="radio" name="position" id="pos2" />
+            <input type="radio" name="position" id="pos3" />
+            <input type="radio" name="position" id="pos4" />
+            <input type="radio" name="position" id="pos5" />
+            <input type="radio" name="position" id="pos6" />
+            <input type="radio" name="position" id="pos7" />
+            <input type="radio" name="position" id="pos8" />
+        </div>
+    </div>
 </section>
 
+
+<!-- Section Veille-->
+<section id="Veille" class="container normal-section" style="min-height: 80vh;">
+    <h2>Veille</h2>
+    <p>Je maîtrise plusieurs langages et technologies : HTML, CSS, JavaScript, PHP, SQL, et bien d’autres.</p>
+</section>
 <!-- Section Projets -->
 <section id="projets" class="container normal-section" style="min-height: 80vh;">
     <h2>Projets</h2>
@@ -91,11 +196,30 @@
 </section>
 
 <!-- Section Contact -->
-<section id="contact" class="container normal-section" style="min-height: 80vh;">
-    <h2>Contact</h2>
-    <p>Vous souhaitez en savoir plus ? Contactez-moi via mon email ou mes réseaux sociaux.</p>
+<section id="contact" class="container normal-section" style="min-height: 50vh; background-color: #f9fafb; padding: 50px 0;">
+    <h2>Contactez-moi</h2>
+    <p>Vous souhaitez en savoir plus ou collaborer avec moi ? Voici comment me contacter :</p>
+
+    <div class="contact-info">
+        <div class="contact-item">
+            <h3>Suivez-moi sur GitHub</h3>
+            <!-- Lien vers GitHub -->
+            <a href="https://github.com/toncompte" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <h3>Envoyez-moi un e-mail</h3>
+            <!-- Lien mailto -->
+            <a id="email-link" href="#" class="social-link">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
 </section>
-<button id="backToTop" onclick="scrollToTop()"></button>
+
+<button id="backToTop"><i class="fas fa-chevron-up"></i></button>
 
 
 <script src="script/script.js"></script>

@@ -1,5 +1,219 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css"; /* FontAwesome */
 
+/* Section Profil */
+#profil {
+    color: #333333; /* Texte sombre pour lisibilité */
+    padding: 50px 0; /* Espacement en haut et en bas de la section */
+    min-height: 80vh;
+}
+
+#profil h2 {
+    font-size: 3rem; /* Taille du titre */
+    color: #1E3A8A; /* Utilisation de la couleur principale */
+    text-align: center; /* Centrer le titre */
+    margin-bottom: 30px; /* Espacement sous le titre */
+    font-weight: bold; /* Mise en gras du titre */
+}
+
+#profil p {
+    font-size: 1.1rem; /* Légèrement plus grand pour le texte */
+    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+    text-align: justify; /* Justifier le texte */
+    color: #333333; /* Assurer un bon contraste avec le fond */
+    max-width: 800px; /* Limiter la largeur du texte */
+    margin: 0 auto; /* Centrer le texte horizontalement */
+    padding: 0 15px; /* Espacement interne pour que le texte ne touche pas les bords */
+}
+
+/* Utilisation des classes Bootstrap pour la mise en page */
+@media (max-width: 768px) {
+    #profil h2 {
+        font-size: 2.5rem; /* Taille réduite du titre sur petits écrans */
+    }
+
+    #profil p {
+        font-size: 1rem; /* Taille du texte réduite sur petits écrans */
+    }
+}
+
+
+
+/* Section BTS */
+#bts h2 {
+    color: #1E3A8A; /* Bleu foncé */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#bts p {
+    color: #333333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+#bts h3 {
+    color: #1E3A8A; /* Bleu foncé */
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+#bts ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    color: #333333;
+}
+
+#bts ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Conteneur pour les options SISR et SLAM */
+.section-fade-in {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Responsive pour les sections */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    .col-md-5 {
+        width: 100%;
+    }
+}
+
+/* Bootstrap Customization */
+.section-fade-in .col-md-5 {
+    background-color: #E0F2FE; /* Bleu clair */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+
+.section-fade-in h3 {
+    color: #1E3A8A; /* Bleu foncé */
+}
+
+.section-fade-in p {
+    color: #333333;
+}
+
+/* Styles supplémentaires pour le texte et les éléments */
+#bts .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bts .col-md-5 {
+    padding: 20px;
+}
+
+
+/* Section Parcours */
+#parcours {
+    padding: 50px 0;
+    color: #333;
+    min-height: 80vh;
+}
+
+#parcours h2 {
+    font-size: 3rem;
+    color: #1E3A8A;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase; /* Majuscule pour donner plus d'impact au titre */
+}
+
+#parcours h3 {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#parcours p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+#parcours .design-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Section Contact */
+#contact {
+    background-color: #F9FAFB; /* Fond clair */
+    text-align: center;
+    color: #333;
+}
+
+#contact h2 {
+    font-size: 3rem;
+    color: #1E3A8A;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.social-link {
+    font-size: 2rem;
+    color: #1E3A8A;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #BFDBFE;
+}
+
+.social-link i {
+    margin: 0 15px;
+}
+
+/* Icône de GitHub et d'e-mail */
+.fab, .fas {
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover .fab, .social-link:hover .fas {
+    transform: scale(1.1);
+}
+
 /* Vérification de l'image */
 img {
     max-width: 100%;
@@ -11,94 +225,110 @@ body {
     background-color: #f9f9f9; /* Blanc cassé pour un look moderne */
     margin: 0;
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: #333333;
 }
 
 /* Navbar */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.95); /* Blanc avec transparence légère */
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
-    z-index: 1000;
     top: 0;
-    transition: top 0.3s ease-in-out;
-}
-
-.navbar-container {
+    left: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 1rem 2rem;
+    z-index: 1000;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
 }
 
+/* Navbar après scroll */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo / Nom */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Ajoute une police moderne */
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Couleur du logo après scroll */
+.navbar.scrolled .navbar-brand {
+    color: #333;
+}
+
+/* Menu */
 .navbar-menu {
     list-style: none;
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-item {
-    flex-grow: 1;
-    text-align: center;
-}
-
+/* Liens */
 .nav-link {
-    color: #333;
+    color: white;
     text-decoration: none;
-    font-size: 1.5rem;
-    font-family: 'Arial', sans-serif;
-    transition: color 0.3s;
-    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    position: relative;
 }
 
-.nav-link:hover {
-    color: #007bff;
+/* Couleur après scroll */
+.navbar.scrolled .nav-link {
+    color: black;
 }
 
+/* Effet de soulignement */
 .nav-link::after {
     content: '';
     display: block;
     width: 0;
     height: 2px;
-    background: #007bff;
-    transition: width 0.3s;
+    background: #1E3A8A;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
 }
 
-.nav-link:hover::after {
+.nav-item:hover .nav-link::after {
     width: 100%;
 }
 
-.navbar-toggle {
-    display: none;
-    flex-direction: column;
+/* Section bouton BackToTop*/
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #1E3A8A;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition: opacity 0.3s;
+    display: none;
+    align-items: center;
+    justify-content: center;
 }
-
-.bar {
-    height: 3px;
-    width: 25px;
-    background-color: #333;
-    margin: 4px 0;
-    transition: 0.4s;
+#backToTop i {
+    color: white;
+    font-size: 24px;
 }
-
-@media (max-width: 768px) {
-    .navbar-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-menu.active {
-        display: flex;
-    }
-
-    .navbar-toggle {
-        display: flex;
-    }
+#backToTop:hover {
+    opacity: 0.8;
 }
 
 /* Section avec la vidéo en arrière-plan */
@@ -108,7 +338,10 @@ body {
     height: 100vh; /* La section prend toute la hauteur de l'écran */
     overflow: hidden;
 }
-
+#hero h1,
+#hero h2 {
+    color: white;
+}
 /* Vidéo de fond limitée à #hero */
 #background-video {
     position: absolute; /* Utilisé en mode absolu pour s'adapter à #hero */
@@ -120,6 +353,21 @@ body {
     z-index: -1;
 }
 
+/* Ajout du dégradé en bas de la section pour un fondu */
+#hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Étend le dégradé sur une plus grande hauteur */
+    background: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.6) 60%,
+    whitesmoke 100%);
+    z-index: 1; /* S'assurer que le dégradé est au-dessus de la vidéo */
+}
 /* Titres et bouton de la vidéo */
 h1, h2, #btnVideo {
     color: #1E3A8A; /* Bleu foncé */
@@ -134,16 +382,13 @@ h1 {
     padding-top: 20vh;
 }
 
-h2 {
-    font-size: 3rem;
-}
 
 #btnVideo {
     position: absolute;
     bottom: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: white;
     color: white;
     border: none;
     border-radius: 5px;
@@ -152,58 +397,21 @@ h2 {
 }
 
 #btnVideo:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: whitesmoke;
 }
 
-/* Bouton Back to Top */
-#backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #007bff, #0056b3); /* Dégradé bleu */
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 30px;
-    cursor: pointer;
-    display: none; /* Masqué par défaut */
-    transition: opacity 0.3s, transform 0.3s, background 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-weight: bold;
-}
-
-/* Le bouton affiche uniquement un accent circonflexe */
-#backToTop::before {
-    content: "^";
-}
-
-#backToTop:hover {
-    background: linear-gradient(135deg, #0056b3, #003d80);
-    transform: scale(1.1);
-}
-
-#backToTop.show {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-}
 
 /* Footer */
 footer {
-    background-color: #1E3A8A; /* Bleu foncé */
+    background-color: white;
     color: #E0F2FE; /* Bleu clair */
     text-align: center;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
 footer a {
-    color: #E0F2FE;
+    color: #1E3A8A;;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -213,6 +421,7 @@ footer a:hover {
 }
 
 .footer-content {
+    color: #1E3A8A;;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,4 +443,149 @@ footer .copyright {
 }
 
 
-timeline css
+/* timeline css */
+
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 100px 0;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+  background: #1E3A8A;
+  -webkit-box-shadow: 5px 5px 10px #5D74B7, -5px -5px 10px #3B5998;
+          box-shadow: 5px 5px 10px #5D74B7, -5px -5px 10px #3B5998;
+  color: white;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  border-radius: 6px;
+}
+
+.timeline-component {
+  margin: 5px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #1E3A8A, #3B5998, #5D74B7);
+    width: 3px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #1E3A8A, #3B5998, #5D74B7);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+
+#competences {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.carousel-container {
+    height: 600px;
+    position: relative;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr repeat(8, 30px) 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.radio-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.radio-buttons input {
+    appearance: none; /* Supprime le style par défaut */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.radio-buttons input:checked {
+    background: #333;
+    transform: scale(1.2);
+}
+#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 10;
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+div.item {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+div.item img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+div.item p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
