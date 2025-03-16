@@ -6,28 +6,39 @@
     <title>Lucas</title>
     <link rel="icon" href="assets/img/FavIcon.png">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-<nav class="navbar fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top navbar-wrapper">
     <div class="container">
         <a class="navbar-brand" href="#">PORTFOLIO</a>
-        <ul class="navbar-menu">
-            <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="#profil">À propos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
-            <li class="nav-item"><a class="nav-link" href="#bts">BTS SIO</a></li>
-            <li class="nav-item"><a class="nav-link" href="#stages">Stages</a></li>
-            <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Veille">Veille</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
-            <li class="nav-item"><a class="nav-link" href="#epreuves">Épreuves</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+
+        <!-- Bouton hamburger pour les petits écrans -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu de navigation -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#profil">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
+                <li class="nav-item"><a class="nav-link" href="#bts">BTS SIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="#stages">Stages</a></li>
+                <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#veille">Veille Technologique</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
+
+<!-- Le reste de votre contenu ici -->
+
 
 <!-- Section avec la vidéo en arrière-plan -->
 <section id="hero">
@@ -46,10 +57,29 @@
 <!-- Section Profil -->
 <section id="profil" class="container normal-section" style="min-height: 50vh;">
     <h2>Profil</h2>
-    <p>Bonjour, je suis Lucas, étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO) avec l'option SLAM (Solutions Logicielles et Applications Métiers). Passionné par le développement , j’ai acquis des compétences solides en programmation, en conception d’applications et en gestion de bases de données.
+    <p>Bonjour, je suis Lucas, étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO) avec l'option SLAM (Solutions Logicielles et Applications Métiers). Passionné par le développement, j’ai acquis des compétences solides en programmation, en conception d’applications et en gestion de bases de données.
         Au cours de ma formation, j'ai eu l'opportunité de travailler sur des projets concrets, tels que la refonte de l’application métier d’une entreprise. Ces expériences m'ont permis de me familiariser avec des technologies comme C#, et de perfectionner mes compétences en analyse des besoins clients et en gestion de projet.
         Je suis motivé à poursuivre mon apprentissage en travaillant sur des projets ambitieux qui répondent aux défis actuels du développement logiciel. Mon objectif est de participer activement à la création de solutions sur-mesure et innovantes pour les entreprises.
-        .</p>
+    </p>
+    <a href="assets/CVRechercheAlternanceL3.pdf" download class="btn-custom" style="margin-bottom: 10px">
+        Mon CV <i class="fas fa-download"></i>
+    </a>
+    <!-- Formulaire de mot de passe -->
+    <form id="passwordForm">
+        <label for="password">Entrez le mot de passe pour télécharger le tableau E5 <label>
+        <input type="password" id="password" required>
+        <button type="submit">Valider</button>
+    </form>
+
+    <!-- Message d'erreur -->
+    <p id="errorMessage" style="color: red; display: none;">Mot de passe incorrect!</p>
+
+    <!-- Lien de téléchargement caché -->
+    <div id="downloadSection" style="display: none;">
+        <a href="assets/CVRechercheAlternanceL3.pdf" download class="btn-custom">
+            Mon CV <i class="fas fa-download"></i>
+        </a>
+    </div>
 </section>
 
 <!-- Section Parcours -->
@@ -70,10 +100,12 @@
             <div class="timeline-component timeline-content">
                 <h3>1ère année de BTS SIO SLAM</h3>
                 <p>Septembre 2023 - juin 2024</p>
+                <a href="https://iia-formation.fr/" target="_blank" class="btn btn-custom" >Site école<i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="timeline-component timeline-content">
                 <h3>STAGE AS PARNÉ</h3>
                 <p>8 Avril 2024 - 7 Juin 2024 </p>
+                <a href="https://as-parne.fr/" target="_blank" class="btn btn-custom">Site de l'association <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
@@ -90,10 +122,12 @@
             <div class=" timeline-component timeline-content">
                 <h3>2ème année de BTS SIO SLAM</h3>
                 <p>Septembre 2024 - Juin 2025</p>
+                <a href="https://iia-formation.fr/" target="_blank" class="btn btn-custom" >Site école<i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="timeline-component timeline-content">
-                <h3>STAGE S3P</h3>
+                <h3>STAGE ALPHA FRANCE</h3>
                 <p>8 Janvier 2025 - 28 Février 2025</p>
+                <a href="https://sppp53.com/fr/" target="_blank" class="btn-custom">Site entreprise <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
@@ -145,22 +179,42 @@
 <section id="stages" class="container normal-section" style="min-height: 80vh;">
     <h2>Stages</h2>
     <p>Durant mon BTS, j’ai réalisé plusieurs stages en entreprise, où j’ai travaillé sur des projets concrets en développement et en gestion de bases de données.</p>
+
+    <div class="section-fade-in">
+        <div class="row" style="display: flex; justify-content: space-between; margin-top: 40px;">
+            <!-- Premier stage à gauche -->
+            <div class="col-md-5 section-fade-in">
+                <h3>Stage 1 - Développement Web</h3>
+                <p><strong>Durée :</strong> 3 mois</p>
+                <p><strong>Entreprise :</strong> XYZ Corp.</p>
+                <p><strong>Description :</strong> J’ai travaillé sur le développement d’applications web, en utilisant principalement HTML, CSS, et JavaScript. J’ai aussi participé à la gestion des bases de données MySQL et à la création de l’architecture des données.</p>
+            </div>
+
+            <!-- Deuxième stage à droite -->
+            <div class="col-md-5 section-fade-in">
+                <h3>Stage 2 - Gestion de Bases de Données</h3>
+                <p><strong>Durée :</strong> 6 mois</p>
+                <p><strong>Entreprise :</strong> ABC Solutions</p>
+                <p><strong>Description :</strong> Mon rôle a consisté à administrer des bases de données PostgreSQL, effectuer des migrations de données, et optimiser les performances des requêtes SQL. J’ai également participé à la mise en place de la sécurité des bases de données.</p>
+            </div>
+        </div>
+    </div>
 </section>
+
 
 <!-- Section Compétences -->
 <section id="competences">
     <h2>Mes Compétences</h2>
     <div class="carousel-container">
         <div id="carousel">
-            <div class="item"><img src="assets/img/html-logo.png" alt="HTML"><p>HTML</p></div>
-            <div class="item"><img src="images/css.png" alt="CSS"><p>CSS</p></div>
-            <div class="item"><img src="images/js.png" alt="JavaScript"><p>JavaScript</p></div>
-            <div class="item"><img src="images/sql.png" alt="Wordpress"><p>Wordpress</p></div>
-            <div class="item"><img src="images/c#.png" alt="C#"><p>C#</p></div>
-            <div class="item"><img src="images/php.png" alt="PHP"><p>PHP</p></div>
-            <div class="item"><img src="images/symfony.png" alt="Symfony"><p>Symfony</p></div>
-            <div class="item"><img src="images/sql.png" alt="SQL"><p>SQL</p></div>
-
+            <div class="item"><i class="fab fa-html5"></i><p>HTML</p></div>
+            <div class="item"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+            <div class="item"><i class="fab fa-js-square"></i><p>JavaScript</p></div>
+            <div class="item"><i class="fab fa-wordpress"></i><p>WordPress</p></div>
+            <div class="item"><i class="fab fa-cuttlefish"></i><p>C#</p></div>
+            <div class="item"><i class="fab fa-php"></i><p>PHP</p></div>
+            <div class="item"><i class="fab fa-symfony"></i><p>Symfony</p></div>
+            <div class="item"><i class="fas fa-database"></i><p>SQL</p></div>
         </div>
 
         <!-- Ajout des boutons radio dans un div -->
@@ -178,33 +232,100 @@
 </section>
 
 
-<!-- Section Veille-->
-<section id="Veille" class="container normal-section" style="min-height: 80vh;">
-    <h2>Veille</h2>
-    <p>Je maîtrise plusieurs langages et technologies : HTML, CSS, JavaScript, PHP, SQL, et bien d’autres.</p>
-</section>
-<!-- Section Projets -->
-<section id="projets" class="container normal-section" style="min-height: 80vh;">
-    <h2>Projets</h2>
-    <p>Voici quelques projets réalisés durant ma formation : développement d’applications web, création de sites internet, etc.</p>
-</section>
 
-<!-- Section Épreuves -->
-<section id="epreuves" class="container normal-section" style="min-height: 80vh;">
-    <h2>Épreuves</h2>
-    <p>Découvrez les différentes épreuves du BTS SIO et les projets qui y sont associés.</p>
-</section>
+<!-- Section Veille-->
+<div class="veille-section" id="veille">
+    <h2>Veille Technologique</h2>
+    <p class="veille-definition">Bienvenue dans ma section de veille technologique ! Ici, je partage les chaînes YouTube que je suis régulièrement pour rester informé des dernières avancées dans le domaine du numérique. Que ce soit en développement web, Linux, cybersécurité ou d'autres technologies émergentes, je m'appuie sur des créateurs de contenu spécialisés pour enrichir mes connaissances et découvrir de nouveaux outils.
+
+        Ma veille s'effectue en anglais et en français, afin de bénéficier d'une diversité de perspectives et d'expertises. J'explore des analyses approfondies, des tutoriels techniques et des discussions sur les tendances du secteur. Cette approche me permet de rester à jour et d'améliorer continuellement mes compétences.
+    <div class="row veille-row">
+        <!-- Référence 1 -->
+        <div class="col-md-3 veille-col">
+            <h3>Grafikart</h3>
+            <p>Grafikart est une plateforme française de formation en ligne dédiée au développement web.
+                Créée par Jonathan Boyer, elle propose des tutoriels et cours sur des technologies comme PHP, JavaScript, React, Laravel et bien d'autres. </p>
+            <p><a href="https://grafikart.fr/" target="_blank">Lien vers le site</a></p>
+        </div>
+
+        <!-- Référence 2 -->
+        <div class="col-md-3 veille-col">
+            <h3>Référence 2 : Titre de la Référence</h3>
+            <p>Description de la deuxième référence. Ajoutez des informations pertinentes liées à la veille technologique.</p>
+            <p><strong>Lien :</strong> <a href="https://www.youtube.com/@Fireship" target="_blank">Cliquez ici pour lire la référence</a></p>
+        </div>
+
+        <!-- Référence 3 -->
+        <div class="col-md-3 veille-col">
+            <h3>Référence 3 : Titre de la Référence</h3>
+            <p><strong>Description :</strong> Description de la troisième référence.</p>
+            <p><strong>Lien :</strong> <a href="https://www.example.com" target="_blank">Cliquez ici pour lire la référence</a></p>
+        </div>
+    </div>
+
+    <div class="row veille-row">
+        <!-- Référence 4 -->
+        <div class="col-md-3 veille-col">
+            <h3>Référence 4 : Titre de la Référence</h3>
+            <p><strong>Description :</strong> Description de la quatrième référence.</p>
+            <p><strong>Lien :</strong> <a href="https://www.example.com" target="_blank">Cliquez ici pour lire la référence</a></p>
+        </div>
+
+        <!-- Référence 5 -->
+        <div class="col-md-3 veille-col">
+            <h3>Référence 5 : Titre de la Référence</h3>
+            <p><strong>Description :</strong> Description de la cinquième référence.</p>
+            <p><strong>Lien :</strong> <a href="https://www.example.com" target="_blank">Cliquez ici pour lire la référence</a></p>
+        </div>
+
+        <!-- Référence 6 -->
+        <div class="col-md-3 veille-col">
+            <h3>Référence 6 : Titre de la Référence</h3>
+            <p><strong>Description :</strong> Description de la sixième référence.</p>
+            <p><strong>Lien :</strong> <a href="https://www.example.com" target="_blank">Cliquez ici pour lire la référence</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Section Projets -->
+<div id="projets" class="container normal-section" style="min-height: 50vh; background-color: #f9fafb; padding: 50px 0;">
+
+    <h2>Mes Projets</h2>
+    <p class="projet-definition">Découvrez nos projets récents dans le domaine de la technologie et de l'innovation. Nous mettons en place des solutions innovantes qui répondent aux défis contemporains.</p>
+
+    <div class="projet-row">
+        <!-- Projet 1 -->
+        <div class="projet-col">
+            <img src="assets/img/WorkTogether_bear_logo.webp" alt="Logo WorkTogether">
+            <h3>WorkTogether - Application Web</h3>
+            <p>Solution en ligne permettant la location et la gestion d'unités et de baies de serveurs.</p>
+            <p><strong>Technologies :</strong> Développée avec Symfony et une base de données MySQL.</p>
+            <p><a href="https://github.com/Lucasfsev/WorkTogetherSymfony" target="_blank">Découvrir le projet</a></p>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="projet-col">
+            <h3>Projet 2 : Titre du Projet</h3>
+            <p><strong>Description :</strong> Description détaillée du deuxième projet. Ce projet illustre notre capacité à relever des défis complexes avec des solutions sur mesure et efficaces.</p>
+            <p><strong>Lien :</strong> <a href="https://www.example.com" target="_blank">Cliquez ici pour en savoir plus</a></p>
+        </div>
+    </div>
+</div>
+
+
 
 <!-- Section Contact -->
 <section id="contact" class="container normal-section" style="min-height: 50vh; background-color: #f9fafb; padding: 50px 0;">
     <h2>Contactez-moi</h2>
-    <p>Vous souhaitez en savoir plus ou collaborer avec moi ? Voici comment me contacter :</p>
+    <p>Voici comment me contacter :</p>
 
     <div class="contact-info">
         <div class="contact-item">
             <h3>Suivez-moi sur GitHub</h3>
             <!-- Lien vers GitHub -->
-            <a href="https://github.com/toncompte" target="_blank" class="social-link">
+            <a href="https://github.com/LucasFsev" target="_blank" class="social-link">
                 <i class="fab fa-github"></i>
             </a>
         </div>
@@ -228,6 +349,8 @@
 <footer>
     <div class="footer-content">
         <p class="copyright">© Copyright 2024 Lucas Alléaume - Tous droits réservés</p>
+        <p><a href="legal.html" aria-label="Mentions légales">Mentions légales</a>
+        </p>
         <div class="footer-socials">
             <a href="https://github.com/Lucasfsev" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>

@@ -26,22 +26,26 @@ backToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-let lastScrollTop = 0;
-const navbar = document.querySelector(".navbar");
+let lastScrollTop = 0; // Dernière position du scroll
+const navbarWrapper = document.querySelector(".navbar-wrapper"); // Sélectionner le conteneur parent de la navbar
 
+// Écouter l'événement de défilement
 window.addEventListener("scroll", () => {
-    let currentScroll = window.scrollY;
+    let currentScroll = window.scrollY; // Position de défilement actuelle
 
+    // Si on fait défiler vers le bas (currentScroll > lastScrollTop), on cache la navbar
     if (currentScroll > lastScrollTop) {
-        // L'utilisateur fait défiler vers le bas
-        navbar.classList.add("hidden");
+        navbarWrapper.classList.add("hidden"); // Ajouter la classe 'hidden' pour cacher la navbar
     } else {
-        // L'utilisateur fait défiler vers le haut
-        navbar.classList.remove("hidden");
+        // Si on fait défiler vers le haut (currentScroll < lastScrollTop), on montre la navbar
+        navbarWrapper.classList.remove("hidden"); // Retirer la classe 'hidden' pour afficher la navbar
     }
 
-    lastScrollTop = currentScroll;
+    // Mettre à jour la dernière position de défilement
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // On ne peut pas avoir un scroll négatif
 });
+
+
 
 
 // Fonction pour vérifier si un élément est visible dans la fenêtre du navigateur
@@ -124,3 +128,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Mot de passe correct (à modifier par ton propre mot de passe)
+const correctPassword = "monMotDePasse123";
+
+document.getElementById('passwordForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    // Récupérer le mot de passe saisi
+    const enteredPassword = document.getElementById('password').value;
+
+    // Vérifier si le mot de passe est correct
+    if (enteredPassword === correctPassword) {
+        document.getElementById('errorMessage').style.display = 'none'; // Cacher le message d'erreur
+
+        // Créer un lien temporaire et déclencher le téléchargement
+        let link = document.createElement('a');
+        link.href = 'assets/CVRechercheAlternanceL3.pdf'; // Chemin du fichier
+        link.download = 'CVRechercheAlternanceL3.pdf'; // Nom du fichier téléchargé
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link); // Nettoyage du DOM
+    } else {
+        // Afficher le message d'erreur
+        document.getElementById('errorMessage').style.display = 'block';
+    }
+});

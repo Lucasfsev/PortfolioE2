@@ -5,43 +5,61 @@
     color: #333333; /* Texte sombre pour lisibilité */
     padding: 50px 0; /* Espacement en haut et en bas de la section */
     min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement tous les éléments */
+    text-align: center; /* Centre le texte */
 }
 
 #profil h2 {
-    font-size: 3rem; /* Taille du titre */
-    color: #1E3A8A; /* Utilisation de la couleur principale */
-    text-align: center; /* Centrer le titre */
-    margin-bottom: 30px; /* Espacement sous le titre */
-    font-weight: bold; /* Mise en gras du titre */
+    font-size: 3rem;
+    color: #1E3A8A;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 #profil p {
-    font-size: 1.1rem; /* Légèrement plus grand pour le texte */
-    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
-    text-align: justify; /* Justifier le texte */
-    color: #333333; /* Assurer un bon contraste avec le fond */
-    max-width: 800px; /* Limiter la largeur du texte */
-    margin: 0 auto; /* Centrer le texte horizontalement */
-    padding: 0 15px; /* Espacement interne pour que le texte ne touche pas les bords */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-/* Utilisation des classes Bootstrap pour la mise en page */
+#profil .btn-custom {
+    margin-top: 20px; /* Espacement avec le texte */
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #1E3A8A;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Media Queries pour petits écrans */
 @media (max-width: 768px) {
     #profil h2 {
-        font-size: 2.5rem; /* Taille réduite du titre sur petits écrans */
+        font-size: 2.5rem;
     }
 
     #profil p {
-        font-size: 1rem; /* Taille du texte réduite sur petits écrans */
+        font-size: 1rem;
     }
 }
+
 
 
 
 /* Section BTS */
 #bts h2 {
     color: #1E3A8A; /* Bleu foncé */
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 30px;
 }
 
@@ -154,6 +172,80 @@
     align-items: center;
 }
 
+#stages h2 {
+    color: #1E3A8A; /* Bleu foncé */
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+#stages p {
+    color: #333333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+#stages h3 {
+    color: #1E3A8A; /* Bleu foncé */
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+#stages ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    color: #333333;
+}
+
+#stages ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Conteneur pour les stages */
+.section-fade-in {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Responsive pour les sections */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    .col-md-5 {
+        width: 100%;
+    }
+}
+
+/* Bootstrap Customization */
+.section-fade-in .col-md-5 {
+    background-color: #E0F2FE; /* Bleu clair */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.section-fade-in h3 {
+    color: #1E3A8A; /* Bleu foncé */
+}
+
+.section-fade-in p {
+    color: #333333;
+}
+
+/* Styles supplémentaires pour le texte et les éléments */
+#stages .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#stages .col-md-5 {
+    padding: 20px;
+}
+
 
 /* Section Contact */
 #contact {
@@ -226,6 +318,7 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: #333333;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -241,6 +334,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.navbar-wrapper {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animation fluide */
+}
+
+/* Cacher la navbar en la déplaçant hors de la vue et en rendant l'élément transparent */
+.navbar-wrapper.hidden {
+    transform: translateY(-100%); /* Déplacer l'élément parent hors de la vue */
+    opacity: 0; /* Rendre l'élément transparent */
 }
 
 /* Navbar après scroll */
@@ -370,6 +473,7 @@ body {
 }
 /* Titres et bouton de la vidéo */
 h1, h2, #btnVideo {
+    font-size: 3rem;
     color: #1E3A8A; /* Bleu foncé */
     font-family: 'Trebuchet MS', sans-serif;
     font-weight: bold;
@@ -398,6 +502,43 @@ h1 {
 
 #btnVideo:hover {
     background-color: whitesmoke;
+}
+
+#mentions-legales h2 {
+    color: #1E3A8A; /* Bleu foncé */
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+#mentions-legales p {
+    color: #333333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+#mentions-legales h3 {
+    color: #1E3A8A; /* Bleu foncé */
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+#mentions-legales ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    color: #333333;
+}
+
+#mentions-legales ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #mentions-legales {
+        padding: 20px;
+    }
 }
 
 
@@ -478,10 +619,41 @@ footer .copyright {
   transition: 0.4s ease;
   overflow-wrap: break-word !important;
   border-radius: 6px;
+  text-align: center;
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-top: 10px;
+
 }
 
 .timeline-component {
   margin: 5px 20px 20px 20px;
+}
+
+.btn-custom {
+    background-color: white;
+    color: #1E3A8A;
+    border: 2px solid #1E3A8A;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-custom:hover {
+    background-color: #E0F2FE;
+    border-color: #1E3A8A;
+    color: #1E3A8A;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-custom:active {
+    transform: scale(0.95);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (min-width: 768px) {
@@ -517,7 +689,13 @@ footer .copyright {
     padding: 50px 0;
     background-color: #f9f9f9;
 }
-
+#competences h2{
+    font-size: 3rem;
+    color: #1E3A8A; /* Bleu foncé */
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
 .carousel-container {
     height: 600px;
     position: relative;
@@ -528,6 +706,12 @@ footer .copyright {
     align-items: center;
     justify-items: center;
 }
+.carousel-container .item i {
+    font-size: 64px; /* Taille plus grande pour les icônes */
+    color: #333; /* Couleur des icônes, vous pouvez l'ajuster à votre goût */
+    margin-bottom: 10px; /* Espacement entre l'icône et le texte */
+}
+
 
 .radio-buttons {
     position: absolute;
@@ -589,3 +773,238 @@ div.item p {
     font-weight: bold;
     color: #333;
 }
+
+
+/* Styles spécifiques pour la navbar sur la page legal.html */
+#legal-page .navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#legal-page .navbar .nav-link {
+    color: black !important; /* Applique la couleur noire aux liens dans la navbar */
+}
+
+#legal-page .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Ajoute une police moderne */
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease-in-out;
+}
+
+
+/* Conteneur de la section de veille */
+.veille-section {
+    margin-top: 40px;
+    padding: 0 15px; /* Ajout d'un petit espace à gauche et à droite pour éviter les bords collés */
+    max-width: 1200px; /* Limite la largeur de la section */
+    margin-left: auto;
+    margin-right: auto; /* Centrage horizontal de la section */
+}
+
+/* Titre principal de la section */
+/* Titre dans la section Veille */
+#veille h2 {
+    font-size: 3rem;
+    color: #1E3A8A;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', sans-serif; /* Ajouter cette ligne pour uniformiser la police */
+}
+
+
+/* Paragraphe avec la définition de la veille technologique */
+.veille-definition {
+    color: #333333;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 800px; /* Limite la largeur du texte pour une meilleure lisibilité */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Lignes dans la section de veille */
+.veille-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Ajout de cette ligne pour mieux gérer la disposition sur les petits écrans */
+}
+
+/* Colonnes dans la section de veille */
+.veille-col {
+    background-color: #E0F2FE; /* Fond bleu clair */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour les cases */
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    width: 30%; /* Assure que les blocs prennent environ 30% de la largeur */
+    margin-left: 1%; /* Petit espace entre les blocs */
+    margin-right: 1%; /* Petit espace entre les blocs */
+}
+
+/* Titres dans la section de veille */
+.veille-col h3 {
+    color: #1E3A8A; /* Bleu foncé */
+    font-size: 1.5rem; /* Taille de police plus grande pour les titres */
+}
+
+/* Paragraphes dans la section de veille */
+.veille-col p {
+    color: #333333;
+    font-size: 1rem;
+}
+
+/* Liens dans la section de veille */
+.veille-col a {
+    color: #1E3A8A; /* Couleur du lien */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: bold;
+}
+
+/* Effet au survol des liens */
+.veille-col a:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+    color: #004e92; /* Changer la couleur au survol */
+}
+
+/* ------------------------ Responsive Design ------------------------ */
+
+/* Lorsque la largeur de l'écran est inférieure à 1200px (tablettes, petits ordinateurs) */
+@media (max-width: 1200px) {
+    .veille-col {
+        width: 45%; /* 2 colonnes par ligne */
+    }
+}
+
+/* Lorsque la largeur de l'écran est inférieure à 768px (smartphones en mode paysage et tablettes) */
+@media (max-width: 768px) {
+    #veille h2 {
+        font-size: 2rem; /* Réduction de la taille du titre */
+    }
+
+    .veille-definition {
+        font-size: 1rem; /* Réduction de la taille de la police */
+        margin-bottom: 20px; /* Moins de marge en bas */
+    }
+
+    .veille-col {
+        width: 48%; /* 2 colonnes avec un peu plus d'espace entre elles */
+    }
+}
+
+/* Lorsque la largeur de l'écran est inférieure à 480px (smartphones en mode portrait) */
+@media (max-width: 480px) {
+    #veille h2 {
+        font-size: 1.8rem; /* Taille du titre plus petite pour les petits écrans */
+    }
+
+    .veille-definition {
+        font-size: 0.95rem; /* Réduction de la taille de la police */
+    }
+
+    .veille-col {
+        width: 100%; /* Chaque élément prend toute la largeur disponible */
+        margin-left: 0; /* Supprimer l'espace à gauche */
+        margin-right: 0; /* Supprimer l'espace à droite */
+    }
+
+    .veille-row {
+        justify-content: center; /* Centrer les éléments sur petits écrans */
+    }
+}
+
+/* Styles spécifiques à la section Projet */
+
+/* Conteneur de la section de projets */
+.projet-section {
+    margin-top: 40px;
+    padding: 0 15px; /* Ajout d'un petit espace à gauche et à droite pour éviter les bords collés */
+    max-width: 1200px; /* Limite la largeur de la section */
+    margin-left: auto;
+    margin-right: auto; /* Centrage horizontal de la section */
+}
+
+#projet h2 {
+    font-size: 3rem;
+    color: #1E3A8A;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', sans-serif; /* Ajouter cette ligne pour uniformiser la police */
+}
+
+/* Paragraphe avec la définition des projets */
+.projet-definition {
+    color: #333333;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 800px; /* Limite la largeur du texte pour une meilleure lisibilité */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Lignes dans la section de projets */
+.projet-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Ajout de cette ligne pour mieux gérer la disposition sur les petits écrans */
+}
+
+/* Colonnes dans la section de projets */
+.projet-col {
+    background-color: #E0F2FE; /* Fond bleu clair */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour les cases */
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    width: 48%; /* Assure que les blocs prennent environ 48% de la largeur */
+    margin-left: 1%; /* Petit espace entre les blocs */
+    margin-right: 1%; /* Petit espace entre les blocs */
+}
+
+.projet-col img {
+    width: 100%; /* Ajuste la largeur pour remplir le bloc */
+    height: auto; /* Garde les proportions */
+    border-radius: 6px; /* Arrondit légèrement les coins */
+    margin-bottom: 15px; /* Ajoute un espace sous l'image */
+}
+
+
+/* Titres dans la section de projets */
+.projet-col h3 {
+    color: #1E3A8A; /* Bleu foncé */
+    font-size: 1.5rem; /* Taille de police plus grande pour les titres */
+}
+
+/* Paragraphes dans la section de projets */
+.projet-col p {
+    color: #333333;
+    font-size: 1rem;
+}
+
+/* Liens dans la section de projets */
+.projet-col a {
+    color: #1E3A8A; /* Couleur du lien */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: bold;
+}
+
+/* Effet au survol des liens */
+.projet-col a:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+    color: #004e92; /* Changer la couleur au survol */
+}
+
+
