@@ -128,8 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Mot de passe correct (à modifier par ton propre mot de passe)
-const correctPassword = "monMotDePasse123";
+// Mot de passe correct
+const correctPassword = "Tabl3auE5P0rtF0l10";
 
 document.getElementById('passwordForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Empêche le rechargement de la page
@@ -143,8 +143,8 @@ document.getElementById('passwordForm').addEventListener('submit', function(even
 
         // Créer un lien temporaire et déclencher le téléchargement
         let link = document.createElement('a');
-        link.href = 'assets/CVRechercheAlternanceL3.pdf'; // Chemin du fichier
-        link.download = 'CVRechercheAlternanceL3.pdf'; // Nom du fichier téléchargé
+        link.href = '/assets/TableauDeSynthèseE5.pdf'; // Chemin du fichier
+        link.download = 'TableauDeSynthèseE5.pdf'; // Nom du fichier téléchargé
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link); // Nettoyage du DOM
