@@ -23,7 +23,7 @@ window.addEventListener("scroll", () => {
 });
 
 backToTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({top: 0, behavior: "smooth"});
 });
 
 let lastScrollTop = 0; // Dernière position du scroll
@@ -44,8 +44,6 @@ window.addEventListener("scroll", () => {
     // Mettre à jour la dernière position de défilement
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // On ne peut pas avoir un scroll négatif
 });
-
-
 
 
 // Fonction pour vérifier si un élément est visible dans la fenêtre du navigateur
@@ -76,7 +74,7 @@ window.addEventListener('scroll', handleScrollAnimation);
 handleScrollAnimation();
 
 
-window.onload = function() {
+window.onload = function () {
     var email = "lucas.alleaume" + "@" + "iia-formation.fr";
     document.getElementById("email-link").href = "mailto:" + email;
     document.getElementById("email-text").textContent = email;
@@ -101,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     let currentIndex = 0;
+
     function autoSlide() {
         currentIndex = (currentIndex + 1) % inputs.length;
         inputs[currentIndex].checked = true;
@@ -127,11 +126,28 @@ document.addEventListener("DOMContentLoaded", function () {
     updateNavbar();
 });
 
+    // Sélectionne toutes les cartes de stage
+    const cards = document.querySelectorAll('.stage-card');
 
+    // Ajoute un effet de rebond lors du survol
+    cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+        // Applique un effet de rebond rapide
+        card.style.transition = 'transform 0.1s ease-in-out';
+        card.style.transform = 'scale(1.1)';
+
+    });
+
+    card.addEventListener('mouseout', () => {
+    // Réinitialise la taille et le fond après le survol
+    card.style.transition = 'transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out';
+    card.style.transform = 'scale(1)';
+});
+});
 // Mot de passe correct
 const correctPassword = "Tabl3auE5P0rtF0l10";
 
-document.getElementById('passwordForm').addEventListener('submit', function(event) {
+document.getElementById('passwordForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Empêche le rechargement de la page
 
     // Récupérer le mot de passe saisi
@@ -153,3 +169,4 @@ document.getElementById('passwordForm').addEventListener('submit', function(even
         document.getElementById('errorMessage').style.display = 'block';
     }
 });
+

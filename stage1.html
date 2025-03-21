@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stage 1ère année</title>
+    <link rel="icon" href="assets/img/FavIcon.png">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- JS de Bootstrap (nécessaire pour activer le menu burger) -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body class="stage-page">
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">PORTFOLIO</a>
+        <!-- Bouton Hamburger pour les écrans mobiles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> <!-- L'icône burger -->
+        </button>
+        <!-- Contenu du menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html#hero">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#profil">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#parcours">Parcours</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#bts">BTS SIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#stages">Stages</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#competences">Compétences</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#veille">Veille Technologique</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#projets">Projets</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5 pt-5">
+    <h2 class="text-center mb-4">Stage AS Parné</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <a href="assets/img/AsParneHomePage.png" data-lightbox="annexes" data-title="Annexe 1">
+                <img src="assets/img/AsParneHomePage.png" class="img-fluid border rounded shadow" alt="Annexe 1">
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="assets/img/AsParneReunion.png" data-lightbox="annexes" data-title="Annexe 2">
+                <img src="assets/img/AsParneReunion.png" class="img-fluid border rounded shadow" alt="Annexe 2">
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="assets/img/AsParneDocumentation.png" data-lightbox="annexes" data-title="Annexe 3">
+                <img src="assets/img/AsParneDocumentation.png" class="img-fluid border rounded shadow" alt="Annexe 3">
+            </a>
+        </div>
+    </div>
+    <h3 class="mt-5">Lien(s) utile(s)</h3>
+    <ul>
+        <li><a href="https://as-parne.fr/">Site de l'AS Parné</a></li>
+    </ul>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".navbar").classList.add("navbar-black");
+    });
+</script>
+</body>
+</html>
