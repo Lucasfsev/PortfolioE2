@@ -159,8 +159,8 @@ document.getElementById('passwordForm').addEventListener('submit', function (eve
 
         // Créer un lien temporaire et déclencher le téléchargement
         let link = document.createElement('a');
-        link.href = '/assets/TableauDeSynthèseE5.pdf'; // Chemin du fichier
-        link.download = 'TableauDeSynthèseE5.pdf'; // Nom du fichier téléchargé
+        link.href = '/assets/TableauDeSynthèseE5.xlsx'; // Chemin du fichier
+        link.download = 'TableauDeSynthèseE5.xlsx'; // Nom du fichier téléchargé
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link); // Nettoyage du DOM
